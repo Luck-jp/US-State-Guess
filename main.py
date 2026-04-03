@@ -28,7 +28,7 @@ while len(guessed_states) < 50:
 
         messagebox.showinfo(
             title  = "Game Over",
-            message = f"You guessed {len(guessed_states)}/50 states.\nCheck 'states_to_learn.csv to improve!\nClick anywhere on the window to exit."
+            message = f"You guessed {len(guessed_states)}/50 states.\nCheck 'states_to_learn.csv' to improve!\nClick anywhere on the window to exit."
         )
         break
     if answer_state in all_states:
