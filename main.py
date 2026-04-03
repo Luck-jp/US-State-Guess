@@ -7,11 +7,11 @@ FONT = ("Arial", 14 , "bold")
 
 screen = turtle.Screen()
 screen.title("U.S States Game")
-image = "Day-25 [int]/day-25-us-states-game-start/blank_states_img.gif"
+image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
-data = pandas.read_csv("Day-25 [int]/day-25-us-states-game-start/50_states.csv")
+data = pandas.read_csv("50_states.csv")
 all_states = data.state.to_list()
 guessed_states = []
 
@@ -24,7 +24,7 @@ while len(guessed_states) < 50:
             if state not in guessed_states:
                 missing_states.append(state)
         new_data = pandas.DataFrame(missing_states)
-        new_data.to_csv("Day-25 [int]/day-25-us-states-game-start/states_to_learn.csv")
+        new_data.to_csv("YOUR_PATH/states_to_learn.csv")
 
         messagebox.showinfo(
             title  = "Game Over",
